@@ -20,7 +20,7 @@ RUN xcaddy build \
     # nginx 适配器模块
     --with github.com/caddyserver/nginx-adapter \
     # 408 模块
-    --with github.com/hairyhenderson/caddy-teapot-module@v0.0.3-0
+    --with github.com/hairyhenderson/caddy-teapot-module
 
 FROM caddy:alpine
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
