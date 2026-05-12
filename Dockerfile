@@ -1,4 +1,4 @@
-FROM caddy:alpine-builder AS builder
+FROM caddy:builder-alpine AS builder
 
 RUN xcaddy build \
     # dns 模块
