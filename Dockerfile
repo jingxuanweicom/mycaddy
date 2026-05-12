@@ -11,8 +11,12 @@ RUN --mount=type=cache,target=/go/pkg/mod \
     --with github.com/caddy-dns/huaweicloud \
     # 四层代理模块
     --with github.com/mholt/caddy-l4 \
-    # docker 容器自动发现模块
-    --with github.com/lucaslorentz/caddy-docker-proxy/v2 
+    # 缓存模块
+    --with github.com/caddyserver/cache-handler \
+    # 限流模块
+    --with github.com/mholt/caddy-ratelimit \
+    # s3存储模块
+    --with github.com/gsmlg-dev/caddy-storage-s3
 FROM caddy:alpine
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
