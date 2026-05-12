@@ -14,7 +14,7 @@ RUN xcaddy build \
     # 网关级 HTTP 缓存模块
     --with github.com/caddyserver/cache-handler \
     # 限流模块
-    --with github.com/mholt/cratelimit \
+    --with github.com/mholt/caddy-ratelimit \
     # 前向代理模块
     --with github.com/caddyserver/forwardproxy@caddy2 \
     # nginx 适配器模块
