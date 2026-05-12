@@ -16,7 +16,7 @@ RUN xcaddy build \
     # 前向代理模块
     --with github.com/caddyserver/forwardproxy@caddy2 \
     # WASM 模块 (支持运行 Go/Rust/Zig/Swift 编译的 WebAssembly)
-    --with github.com/pauloappbr/gojinn
+    --with github.com/gojinn-io/gojinn
 
 FROM caddy:alpine
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
