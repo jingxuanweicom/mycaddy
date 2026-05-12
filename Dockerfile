@@ -16,7 +16,9 @@ RUN --mount=type=cache,target=/go/pkg/mod \
     # 限流模块
     --with github.com/mholt/caddy-ratelimit \
     # s3存储模块
-    --with github.com/gsmlg-dev/caddy-storage-s3
+    --with github.com/gsmlg-dev/caddy-storage-s3 \
+    # wasm 模块
+    --with github.com/gojinn-io/gojinn
 FROM caddy:alpine
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
